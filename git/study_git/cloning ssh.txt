@@ -1,0 +1,17 @@
+1)create folder - mkdir <name>
+2)go to the new created folder - cd <name>
+3)init project - git init
+4)go to the .ssh/ folder - cd ~/.ssh
+5)generate new pair public/private keys - ssh-keygen -t rsa 
+	wrote filename where need to save
+	without passphrase
+6)further need add key pairs - ssh-add key_oracle_pl_sql(Could not open a connection to your authentication agent.) if this error, then need to do below:
+	run ssh-agent - eval $(ssh-agent -s) - (Agent pid 5192)
+7)add key pair - ssh-add key_oracle_pl_sql(key pair name), response - Identity added: key_oracle_pl_sql (key_oracle_pl_sql)
+8)test connection - ssh -T git@github.com, response - (Hi akbars95! You've successfully authenticated, but GitHub does not provide shell access.)
+9)go to where init new project - cd work/github/oracle_pl_sql
+10)cloning project - git clone git@github.com:akbars95/oracle_pl_sql.git
+11)add remote name - git remote add origin git@github.com:akbars95/oracle_pl_sql.git
+
+
+ssh-add -l  - verify that you have a private key generate

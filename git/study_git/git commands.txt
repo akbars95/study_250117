@@ -1,0 +1,126 @@
+pwd - current path
+clear - for clear cmd window
+rm third.txt - delete specific file
+git help - for helping
+git mv description.txt descr/description.txt - moved file
+ssh-keygen -t rsa - generate private/public rsa key pair(c:/users/<username>/.ssh folder)
+
+CONFIG
+	git config --list - list configurations
+
+INIT
+	git init - init project
+	
+ADD
+	git add . - add all files(to staged)
+	git add second.txt - specific file name add(to staged)
+	git add --all - add all files and sub folders file
+	
+COMMIT
+	git commit -m "Here commit message" - git commit with message
+	git help commit - help commit(open in ther browser)
+	git commit -am"Message" - at once committed without git add command
+	git commit --amend -m 'Message' - amend commit
+	
+LOG
+	git log - view commit logs
+	git log --author="akbars95" - view commits specific author
+	git log -1(commit number) = get latest commit numbers
+	git log --all - show full history
+	git log <branch_name> - show log branch_name
+
+STATUS
+	git status - view status files
+	git status -s - view short status
+
+DIFF
+	git diff - view differences
+	git diff --staged - view differences files, which in the stage area
+	git diff head~1 head - show differences between current commit and penultimate
+
+CHECKOUT
+	git checkout -- "git commands.txt"(file name)(git checkout -- <target>) - to discard changes in working directory
+	git checkout HEAD -- <filename> - discard filename
+	git checkout <commit hash> - cehckout to commit hash
+	git checkout [<branch_name> | head | <commit hash>]~<number_go_back>( git checkout master~1) - switched to one cmmit back from master branch name
+	git checkout <branch_name> - switch branch
+	git checkout -b <branch_name> - create and checkout to the new branch <branch_name>
+	git checkout -B <branch_name> <starting_point]> - created new local branch with <branch_name> with <starting_point>(git checkout -B master origin/master)
+
+REMOTE
+	git remote - show remote repository
+	git remote show origin - remote info
+	git remote add origin(remote name) https://github.com/akbars95/oracle_pl_sql.git(link to repository)
+	git remote - get remote name
+
+CLONE
+	git clone zat@EN32211 MINGW64 /d/work/github
+	git clone https://github.com/akbars95/oracle_pl_sql.git - clone via http(s)
+
+FETCH
+	git fetch --all - fetch all
+	git fetch origin <branch_name> - fetch branch_name
+
+PULL
+	git pull origin master - pull remote changes from other people of your command
+	git pull - pull current branch changes
+	git pull origin <branch_name> - pull branch_name
+	
+push
+	git push -f <remote> <branch> - force push
+	git push -u origin <remote> <branch> --force - force push
+	git push origin --delete <branch_name> - delete remote branch
+	git push -u origin(remote name) study(branch name)
+
+SHOW
+	git show <commit_hash> - show commit inside
+
+BRANCH
+	git branch <name_new_branch> - create new branch
+	git branch - show all branches
+	git branch -a - show all branches
+	git branch -m <old_branch_name> <new_branch_name> - rename branch
+	git branch -D <branch_name> - delete <branch_name> local branch
+	git branch -r - show deleted branches
+
+MERGE
+	git merge <branch_name> - merge current branch to <branch_name>
+	git merge <branch_name> - megde current branch with <branch_name>
+git rebase <rebase_branch_name> - rebase current branch to the <rebase_branch_name>
+
+
+STASH
+	git stash - add your changes to the stash
+	git stash list - see stash
+	git stash pop - delete from stash and move data to the unstaged
+
+RESET
+	git reset --soft e14b9cf4dcc90b8bf2f01335012cbb1b574d0085(commit hash)
+	git reset --mixed e14b9cf4dcc90b8bf2f01335012cbb1b574d0085(commit hash)
+	git reset --hard e14b9cf4dcc90b8bf2f01335012cbb1b574d0085(commit hash)
+	git reset --hard origin/<branch_name> - reset branch_name local with same anem to remote branch_name
+	git reset . - Unstaged files
+
+TAG
+	git tag -a '<tagName>' -m '<Message>' - crate local tag
+	git push origin tag <tagName> - pushed tag to the remote
+	git tag -l - view list tags
+	git show <tagName> - show info about tag
+	git tag - show all tags
+	git tag -d <tagName> - delete <tagName> locally
+	git push origin :<tagName>  - delete remote tag
+
+PATCH
+	git format-patch -1(commit number) - last commit create patch
+	git apply <patch_file_path> - apply patch without creating commit
+	git am <patch_file_path> - apply patch with creating commit
+
+CHERRY-PICK
+	git cherry-pick <commit_hash> - cherry pick, pick commits
+	git cherry-pick <commit_hash> -n - cherry-pick, without commits
+
+ALLIAS
+	git config --global alias.co checkout
+	git config --global alias.br branch
+	git config --global alias.ci commit
+	git config --global alias.st status

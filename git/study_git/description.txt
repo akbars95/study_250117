@@ -1,0 +1,13 @@
+if modified file and add to the stage, command git diff nothing show
+you need add 
+
+rename file: you should renamed file via file system
+git status
+git add "git commands.txt" - this is file new name
+git rm "simple file.txt" - remove old file name
+git status - should will show, that you renamed file, further you can to make commit
+
+git reset HEAD file name
+
+
+THIS IS ERROR

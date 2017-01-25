@@ -1,0 +1,25 @@
+From 2eaa748e1adb04d7b6efdaff554b0af686030148 Mon Sep 17 00:00:00 2001
+From: akbars95 <Dmitri.Minzat@endava.com>
+Date: Tue, 29 Nov 2016 13:16:24 +0200
+Subject: [PATCH] add patch commands
+
+---
+ study/git commands.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/study/git commands.txt b/study/git commands.txt
+index ba12b5b..6e6aecf 100644
+--- a/study/git commands.txt	
++++ b/study/git commands.txt	
+@@ -68,4 +68,6 @@ git tag -l - view list tags
+ git show <tagName> - show info about tag
+ git tag - show all tags
+ git tag -d <tagName> - delete <tagName> locally
+-git push origin :<tagName>  - delete remote tag
+\ No newline at end of file
++git push origin :<tagName>  - delete remote tag
++
++PATCH
+-- 
+2.7.1.windows.2
+
